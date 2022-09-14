@@ -3,8 +3,9 @@ import express from "express";
 import cors from "cors";
 // import morgan from "morgan";
 import "./connect-db.js";
-// import userRouter from "./routes/user.router.js";
 import { errorHandler404, errorHandlerGeneric } from "./lib/error-handler.js";
+import productRouter from "./routes/Product.router.js";
+import userRouter from "./routes/User.router.js";
 
 const app = express();
 
@@ -20,26 +21,24 @@ app.use(
     //credentials: true, // accept incoming cookies
   )
 ); // this is enough setup for token exchange
- app.use(express.json()); // JSON Parser => req.body
+// app.use(express.json()); // JSON Parser => req.body
 // app.use(express.json({ limit: "300KB" })); // JSON Parser => req.body
-//app.use(express.json({ limit: config.UPLOAD_LIMIT })); // JSON Parser => req.body
+app.use(express.json({ limit: config.UPLOAD_LIMIT })); // JSON Parser => req.body
 
 app.get("/", (req, res) => {
   // res.send("Hello from API!")
   res.send(`
   <h2>Welcome!</h2>
 <div>Our routes:</div>
+<div>Home: <a href="/">/</a></div>
+<div>Users: <a href="/users">/users</a></div>
+<div>Products: <a href="/products">/products</a></div>
 `);
 });
-//<div>Home: <a href="/">/</a></div>
-//<div>User: <a href="/user">/user</a></div>
-//<div>Posts: <a href="/posts">/posts</a></div>
-//<div>Comments: <a href="/comments">/comments</a></div>
 
 // load ROUTERS
-//app.use("/user", userRouter);
-// app.use("/posts", postRouter);
-// app.use("/comments", commentsRouter);
+app.use("/users", userRouter);
+app.use("/products", productRouter);
 
 /// 404 error handler
 app.use(errorHandler404);
