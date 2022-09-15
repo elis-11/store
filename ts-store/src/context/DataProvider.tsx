@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 import { loadUserInLocalStorage } from '../helpers/LocalStorage';
 import { IProduct } from "../types/product.types";
 import { IContextData, IUser } from "../types/user.types";
@@ -12,9 +12,9 @@ type Props = {
 }
 
 export const DataProvider = ({ children }: Props) => {
-  const userLocalStorage = loadUserInLocalStorage();
+  const userLs = loadUserInLocalStorage();
 
-  const [user, setUser] = useState<IUser | undefined>(userLocalStorage);
+  const [user, setUser] = useState<IUser | undefined>(userLs);
   const [users, setUsers] = useState<IUser[]>([]);
   const [errors, setErrors] = useState<string>("");
   const [products, setProducts] = useState<IProduct[]>([]);

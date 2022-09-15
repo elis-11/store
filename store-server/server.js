@@ -6,10 +6,11 @@ import "./connect-db.js";
 import { errorHandler404, errorHandlerGeneric } from "./lib/error-handler.js";
 import productRouter from "./routes/Product.router.js";
 import userRouter from "./routes/User.router.js";
+import morgan from "morgan";
 
 const app = express();
 
-//app.use(morgan("dev")); // log all requests to API
+app.use(morgan("dev")); // log all requests to API
 app.use(
   cors(
     {

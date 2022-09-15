@@ -2,8 +2,8 @@ import { Navigate } from "react-router-dom";
 import { useDataContext } from "../context/DataProvider";
 
 type Props = {
-  children: JSX.Element;
-  admin?: boolean;
+  children: JSX.Element,
+  admin?: boolean
 };
 
 export const ProtectedRoute = ({ children, admin = false }: Props) => {

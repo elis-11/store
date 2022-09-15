@@ -18,9 +18,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Product />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route
             path="/users"
             element={
@@ -32,7 +31,7 @@ function App() {
           <Route
             path="/admin/*"
             element={
-              <ProtectedRoute>
+              <ProtectedRoute admin>
                 <Admin />
               </ProtectedRoute>
             }

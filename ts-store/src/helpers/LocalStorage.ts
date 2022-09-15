@@ -1,4 +1,4 @@
-import {IUser} from '../types/user.types'
+import { IUser } from "../types/user.types";
 
 const LOGIN_USER = "LOGIN_USER";
 
@@ -12,6 +12,8 @@ export const loadUserInLocalStorage = () => {
   if (!userStr) return;
 
   const userObj = JSON.parse(userStr);
+  //   console.log(userStr.email);
+  //   console.log(userObj.email);
   return userObj;
 };
 
