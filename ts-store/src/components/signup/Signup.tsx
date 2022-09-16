@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { signupApi } from "../../helpers/ApiCalls";
+import './Signup.scss';
 
 export const Signup = () => {
   const { errors, setErrors } = useDataContext();

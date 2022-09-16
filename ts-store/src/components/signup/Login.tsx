@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { loginApi } from "../../helpers/ApiCalls";
 import { storeUserInLocalStorage } from "../../helpers/LocalStorage";
+import './Signup.scss';
 
 export const Login = () => {
   const { setUser, errors, setErrors } = useDataContext();
