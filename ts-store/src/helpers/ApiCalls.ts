@@ -1,3 +1,4 @@
+import { IProductCreate, IProductUpdate } from "../types/product.types";
 import { IUserCreate, IUserUpdate } from "../types/user.types";
 
 const API_URL = import.meta.env.VITE_API_URL;
@@ -59,3 +60,45 @@ export const updateUserApi = async (
   });
   return response.json();
 };
+
+//***RODUCTS***/
+// get All products
+export const getProductsApi= async () => {
+  const response = await fetch(`${API_URL}/products`)
+  return response.json();
+}
+
+// get single product
+export const getProductApi= async (productId: string) => {
+const response = await fetch(`${API_URL}/products/${productId}`)
+return response.json();
+}
+
+// create product
+export const createProductApi = async (token: string, productData: IProductCreate)=>{
+  const response = await fetch(`${API_URL}/products`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json", Authorization: token},
+    body: JSON.stringify(productData)
+  })
+return response.json();
+}
+
+// update product
+export const updateProductApi= async (token: string, productId: string, productData: IProductUpdate)=>{
+  const response = await fetch(`${API_URL}/products/${productId}`, {
+    method: 'PATCH',
+    headers: {"Content-Type": "application/json", Authorization: token},
+    body: JSON.stringify(productData)
+  })
+return response.json();
+}
+
+// delete product
+export const deleteProductApi= async (token: string, productId: string)=>{
+  const response = await fetch(`${API_URL}/products/${productId}`, {
+    method: 'DELETE',
+    headers: {Authorization: token},
+  })
+  return response.json();
+}
