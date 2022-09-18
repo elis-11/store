@@ -29,7 +29,7 @@ export const Products = () => {
 
   return (
     <div className="Products">
-      <h2>Products</h2>
+      <h2>Cakes</h2>
       {user && (
         <div className="content">
           {products.map((product) => (

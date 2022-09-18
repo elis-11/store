@@ -19,7 +19,7 @@ export const Navbar = () => {
     <div className="Navbar">
       <div className="logo">{user && <NavLink to="/">Store</NavLink>}</div>
       <div className="nav">
-        <NavLink to="/">Products</NavLink>
+        <NavLink to="/">Product</NavLink>
         {!user && <NavLink to="/login">Login</NavLink>}
         {!user && <NavLink to="/signup">Signup</NavLink>}
         {user?.role === "admin" && <NavLink to="/admin">Admin</NavLink>}

@@ -12,17 +12,17 @@ export const Admin = () => {
     <div className="Admin">
       <div className="links">
         <div>
-          <NavLink to="" end>Products</NavLink>
-        </div>
-        <div>
-          <NavLink to="users">
+          <NavLink to="">
             Users
           </NavLink>
+        <div>
+          <NavLink to="products" end>Products</NavLink>
+        </div>
         </div>
       </div>
       <Routes >
-        <Route path="/" element={<Products/>}/>
-        <Route path="/users" element={<Users/>}/>
+        <Route path="/" element={<Users/>}/>
+        <Route path="/products" element={<Products/>}/>
       </Routes>
     </div>
   );

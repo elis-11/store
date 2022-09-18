@@ -35,7 +35,7 @@ export const Login = () => {
     setErrors("");
     storeUserInLocalStorage(result);
     setUser(result);
-    navigate("/users");
+    navigate("/product");
   };
   return (
     <div className="Login">

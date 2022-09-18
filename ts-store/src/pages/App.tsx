@@ -18,7 +18,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route index element={<Product />} />
+          <Route path="/" element={<Product />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           {/* <Route
