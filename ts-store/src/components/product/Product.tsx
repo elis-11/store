@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { getProductsApi } from "../../helpers/ApiCalls";
-import "./Product.scss";
+import "../admin/Admin.scss";
 
 export const Product = () => {
   const { user, products, setProducts, errors, setErrors } = useDataContext();
@@ -29,23 +29,27 @@ export const Product = () => {
 
   return (
     <div className="Products">
-      <h2>Products</h2>
+      <h2>Cakes</h2>
       {user && (
         <div className="content">
           {products.map((product) => (
             <div key={product._id} className="product">
               <div>
                 <Link to={`/products/${product._id}`} state={product}>
-              <img src={product.image} style={{ width: "50px" }} />
+                  <img src={product.image} />
                 </Link>
               </div>
-              <div>{product.name}</div>
-              <div>{product.description}</div>
-              <div>{product.price}</div>
-              <div className="buy">
-              {/* <Link to={`/products/${product._id}`} state={product}> */}
-                {/* Buy now */}
-              {/* </Link> */}
+              <div className="data">
+                <div className="name">{product.name}</div>
+                <div>{product.description}</div>
+                <div className="details">
+                  <div className="buy">
+                    <span>{product.price} $</span>
+                    <Link to={`/products/${product._id}`} state={product}>
+                      Buy now
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

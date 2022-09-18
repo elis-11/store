@@ -6,6 +6,8 @@ const ProductSchema = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String },
+    group: { type: String, default: "trend", enum: ["trend", "wedding", "chiffon", "flourless", ] },
+
     price: { type: Number, required: true },
     image: {type: String},
   },

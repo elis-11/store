@@ -1,7 +1,6 @@
 import config from "./config.js";
 import express from "express";
 import cors from "cors";
-// import morgan from "morgan";
 import "./connect-db.js";
 import { errorHandler404, errorHandlerGeneric } from "./lib/error-handler.js";
 import productRouter from "./routes/Product.router.js";
