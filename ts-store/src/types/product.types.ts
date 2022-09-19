@@ -4,21 +4,21 @@ export interface IProduct {
 _id: string;
 name: string;
 description?: string;
-price: number;
+price?: string;
 image?: string;
 }
 
 export interface IProductCreate {
     name: string;
     description?: string;
-    price: number;
+    price?: string;
     image?: string;
     }
 
 export interface IProductUpdate {
     name?: string;
     description?: string;
-    price?: number;
+    price?: string;
     image?: string;
     }
 

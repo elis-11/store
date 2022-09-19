@@ -38,6 +38,9 @@ export const Product = () => {
   return (
     <div className="Products">
       <h2>Cakes</h2>
+     <h3>
+      {products.length} {products.length === 1 ? "Cake" : "Cakes"}
+     </h3>
       <div className="search">
         <form
           onSubmit={(e) => {
@@ -58,7 +61,7 @@ export const Product = () => {
       </div>
       {user && (
         <div className="content">
-          {filteredProducts.map((product) => (
+          {([...filteredProducts] || []).reverse().map((product) => (
             <div key={product._id} className="product">
               <div>
                 <Link to={`/products/${product._id}`} state={product}>

@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
+// import { getProductsApi } from "../../helpers/ApiCalls";
 import { getProductsApi } from "../../helpers/ApiCalls";
 import "./Admin.scss";
 
 export const Products = () => {
   const { user, products, setProducts, errors, setErrors } = useDataContext();
   const [search, setSearch] = useState("");
-  const inputRef= useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // fetch data from backend on LOAD
   // and afterwards store them in context
@@ -38,10 +39,14 @@ export const Products = () => {
   return (
     <div className="Products">
       <h2>Cakes</h2>
-
-      <h3>
-        {products.length} {products.length === 1 ? "Cake" : "Cakes"}
-      </h3>
+      <header>
+        <span className="total">
+          {products.length} {products.length === 1 ? "Cake" : "Cakes"}
+        </span>
+        <div className="Add">
+          <NavLink to="/addproduct">Create Product</NavLink>
+        </div>
+      </header>
 
       <div className="search">
         <form
@@ -64,7 +69,7 @@ export const Products = () => {
 
       {user && (
         <div className="content">
-          {filteredProducts.map((product) => (
+          {([...filteredProducts] || []).reverse().map((product) => (
             <div key={product._id} className="product">
               <div>
                 <Link to={`/products/${product._id}`} state={product}>

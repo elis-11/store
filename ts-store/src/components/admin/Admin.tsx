@@ -1,8 +1,6 @@
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { Users } from "../users/Users";
 import { Products } from "./Products";
-import "./Admin.scss";
-
 
 export const Admin = () => {
   const navigate= useNavigate();
@@ -15,12 +13,12 @@ export const Admin = () => {
           <NavLink to="" end>
             Users
           </NavLink>
+        </div>
         <div>
           <NavLink to="products">Products</NavLink>
         </div>
-        </div>
       </div>
-      <Routes >
+      <Routes>
         <Route path="/" element={<Users/>}/>
         <Route path="/products" element={<Products/>}/>
       </Routes>
