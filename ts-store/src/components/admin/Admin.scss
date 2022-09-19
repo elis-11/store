@@ -24,6 +24,14 @@
     font-weight: bold;
     color: rgb(177, 157, 157);
   }
+  .search{
+    input{
+      width: 30rem;
+      height: 2.2rem;
+      padding-left: 1em;
+      background: transparent;
+    }
+  }
   .content {
     width: 100%;
     margin: auto;

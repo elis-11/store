@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { getProductsApi } from "../../helpers/ApiCalls";
@@ -6,6 +6,8 @@ import "../admin/Admin.scss";
 
 export const Product = () => {
   const { user, products, setProducts, errors, setErrors } = useDataContext();
+  const [search, setSearch] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // fetch data from backend on LOAD
   // and afterwards store them in context
@@ -27,12 +29,36 @@ export const Product = () => {
     loadData();
   }, []);
 
+  const filteredProducts = products.filter(
+    (product) =>
+      product.name?.toLowerCase().includes(search.toLowerCase()) ||
+      product.description?.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="Products">
       <h2>Cakes</h2>
+      <div className="search">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
+          <input
+            autoFocus
+            ref={inputRef}
+            id="search"
+            type="text"
+            role="search"
+            placeholder="Search..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </form>
+      </div>
       {user && (
         <div className="content">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <div key={product._id} className="product">
               <div>
                 <Link to={`/products/${product._id}`} state={product}>

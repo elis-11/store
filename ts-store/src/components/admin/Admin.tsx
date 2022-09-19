@@ -12,11 +12,11 @@ export const Admin = () => {
     <div className="Admin">
       <div className="links">
         <div>
-          <NavLink to="">
+          <NavLink to="" end>
             Users
           </NavLink>
         <div>
-          <NavLink to="products" end>Products</NavLink>
+          <NavLink to="products">Products</NavLink>
         </div>
         </div>
       </div>
