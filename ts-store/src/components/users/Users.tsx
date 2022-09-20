@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
-import { getUsersApi } from "../../helpers/ApiCalls";
+import { deleteUserApi, getUsersApi } from "../../helpers/ApiCalls";
 import "./Users.scss";
 
 export const Users = () => {
@@ -33,6 +33,20 @@ export const Users = () => {
       user.email.toLowerCase().includes(search.toLowerCase())
   );
 
+  //! delete
+  const handleDelete = async (userId: string) => {
+    if (!user) return;
+
+    // 1.step => delete user at API
+    const response = await deleteUserApi(user.token, userId);
+
+    // 2.step => delete user in state
+    const usersCopy = users.filter((user) => user._id !== userId);
+    console.log(usersCopy);
+
+    setUsers(usersCopy);
+  };
+
   return (
     <div className="User">
       <h2>
@@ -51,7 +65,12 @@ export const Users = () => {
             placeholder="Search..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            style={{width: "30rem", height: "2rem", paddingLeft: "1rem", background: "transparent"}}
+            style={{
+              width: "30rem",
+              height: "2rem",
+              paddingLeft: "1rem",
+              background: "transparent",
+            }}
           />
         </form>
       </div>
@@ -63,6 +82,19 @@ export const Users = () => {
             </div>
             <div className="name">{user.name}</div>
             <div className="email">{user.email}</div>
+            <div className="icons">
+              <div
+                // className="delete"
+                style={{
+                  fontSize: ".8rem",
+                  marginRight: "1rem",
+                  cursor: "pointer",
+                }}
+                onClick={() => handleDelete(user._id)}
+              >
+                &#128465;
+              </div>
+            </div>
           </div>
         ))}
       </div>

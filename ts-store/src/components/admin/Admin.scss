@@ -1,4 +1,4 @@
-*{ 
+* {
   box-sizing: border-box;
 }
 .Admin {
@@ -15,7 +15,7 @@
       font-size: 35px;
       color: rgb(195, 187, 187);
       text-decoration: none;
-      :first-child{
+      :first-child {
         margin-bottom: 3rem;
       }
       &:hover {
@@ -40,11 +40,10 @@
     display: flex;
     justify-content: space-evenly;
     margin: 2rem;
-    .total{
+    .total {
       font-weight: bold;
       font-size: 1.5rem;
       color: rgb(240, 216, 216);
-
     }
     a {
       border-radius: 5px;
@@ -122,10 +121,15 @@
           }
         }
       }
+      .icons {
+        .delete {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
-.Add{
+.Add {
   .create {
     img {
       width: 25%;
@@ -149,11 +153,10 @@
       padding: 0.7rem 2.5rem;
       text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
       &:hover {
-      background-color: rgb(232, 194, 194);
+        background-color: rgb(232, 194, 194);
         box-shadow: 1px 1px 2px white, 0 0 15px white, 0 0 15px white;
         text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
       }
     }
   }
-
 }
