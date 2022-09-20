@@ -4,7 +4,7 @@ import { useDataContext } from "../../context/DataProvider";
 import { getProductsApi } from "../../helpers/ApiCalls";
 import "../admin/Admin.scss";
 
-export const Product = () => {
+export const Home = () => {
   const { user, products, setProducts, errors, setErrors } = useDataContext();
   const [search, setSearch] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
@@ -38,9 +38,15 @@ export const Product = () => {
   return (
     <div className="Products">
       <h2>Cakes</h2>
-     <h3>
-      {products.length} {products.length === 1 ? "Cake" : "Cakes"}
-     </h3>
+      <header>
+        <span>
+          {products.length} {products.length === 1 ? "Cake" : "Cakes"}
+        </span>
+        <span>
+          <Link to="/cart">Cart &#128722;</Link>
+        </span>
+      </header>
+
       <div className="search">
         <form
           onSubmit={(e) => {

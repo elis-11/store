@@ -17,6 +17,7 @@ export const AddProduct = () => {
   const refPrice = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
 
+
   const onProductCreate: React.FocusEventHandler<HTMLFormElement> = async (
     e
   ) => {
@@ -42,7 +43,7 @@ export const AddProduct = () => {
     const newProductApi = await createProductApi(user.token, productNew);
     console.log(newProductApi);
     setProducts([...products, newProductApi]);
-    navigate("products");
+    navigate("/");
     refName.current.value = "";
     refDescription.current.value = "";
     refPrice.current.value = "";

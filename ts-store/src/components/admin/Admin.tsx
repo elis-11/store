@@ -1,26 +1,22 @@
-import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import { Users } from "../users/Users";
 import { Products } from "./Products";
 
 export const Admin = () => {
-  const navigate= useNavigate();
 
-  
   return (
     <div className="Admin">
       <div className="links">
         <div>
-          <NavLink to="" end>
-            Users
-          </NavLink>
+          <NavLink to="">Products</NavLink>
         </div>
         <div>
-          <NavLink to="products">Products</NavLink>
+          <NavLink to="users">Users</NavLink>
         </div>
       </div>
       <Routes>
-        <Route path="/" element={<Users/>}/>
-        <Route path="/products" element={<Products/>}/>
+        <Route path="/" element={<Products />} />
+        <Route path="users" element={<Users />} />
       </Routes>
     </div>
   );

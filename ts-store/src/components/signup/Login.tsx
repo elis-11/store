@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { loginApi } from "../../helpers/ApiCalls";
@@ -35,7 +35,7 @@ export const Login = () => {
     setErrors("");
     storeUserInLocalStorage(result);
     setUser(result);
-    navigate("/product");
+    navigate("/");
   };
   return (
     <div className="Login">
