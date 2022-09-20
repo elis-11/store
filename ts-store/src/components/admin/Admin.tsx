@@ -1,5 +1,6 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import { Users } from "../users/Users";
+import { Cart } from "./Cart";
 import { Products } from "./Products";
 
 export const Admin = () => {
@@ -13,10 +14,14 @@ export const Admin = () => {
         <div>
           <NavLink to="users">Users</NavLink>
         </div>
+        <div>
+          <NavLink to="cart">Cart</NavLink>
+        </div>
       </div>
       <Routes>
-        <Route path="/" element={<Products />} />
+        <Route path="" element={<Products />} />
         <Route path="users" element={<Users />} />
+        <Route path="cart" element={<Cart />} />
       </Routes>
     </div>
   );

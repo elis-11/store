@@ -83,7 +83,7 @@ export const AddProduct = () => {
             <input type="text" ref={refPrice} placeholder="Price" />
           </div>
           <button type="submit">Create</button>
-          <NavLink className="back" to="/products">
+          <NavLink className="back" to="/admin">
             Back
           </NavLink>
           {/* select image-button click handler */}

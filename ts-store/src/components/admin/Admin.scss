@@ -1,6 +1,10 @@
+*{ 
+  box-sizing: border-box;
+}
 .Admin {
   display: flex;
   .links {
+    margin: 30px;
     width: 20%;
     padding-top: 4rem;
     padding-right: 4rem;
@@ -11,7 +15,12 @@
       font-size: 35px;
       color: rgb(195, 187, 187);
       text-decoration: none;
-      padding-top: 5rem;
+      :first-child{
+        margin-bottom: 3rem;
+      }
+      &:hover {
+        color: rgb(240, 216, 216);
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { deleteProductApi, getProductsApi } from "../../helpers/ApiCalls";
 import { IProduct } from "../../types/product.types";
@@ -11,6 +11,7 @@ export const Products = () => {
   const [search, setSearch] = useState("");
   const [showMsg, setShowMsg] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
 
   // fetch data from backend on LOAD
   // and afterwards store them in context
@@ -28,6 +29,7 @@ export const Products = () => {
       // store received users in our central data state
       setErrors("");
       setProducts(result);
+      // navigate("/products")
     };
     loadData();
   }, []);
@@ -102,9 +104,7 @@ export const Products = () => {
           {([...filteredProducts] || []).reverse().map((product) => (
             <div key={product._id} className="product">
               <div>
-                <Link to={`/products/${product._id}`} state={product}>
                   <img src={product.image} alt={product.name} />
-                </Link>
               </div>
               <div className="data">
                 <div className="name">{product.name}</div>
