@@ -1,7 +1,11 @@
 .Admin {
   display: flex;
   .links {
-    width: 15%;
+    width: 20%;
+    padding-top: 4rem;
+    padding-right: 4rem;
+    height: 80vh;
+    border-right: 2px solid #ccc;
     a {
       font-weight: bold;
       font-size: 35px;
@@ -26,9 +30,12 @@
   header {
     display: flex;
     justify-content: space-evenly;
+    margin: 2rem;
     .total{
       font-weight: bold;
       font-size: 1.5rem;
+      color: rgb(240, 216, 216);
+
     }
     a {
       border-radius: 5px;

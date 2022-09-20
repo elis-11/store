@@ -17,7 +17,8 @@ export const Navbar = () => {
 
   return (
     <div className="Navbar">
-      <div className="logo">{user && <NavLink to="/">Store</NavLink>}</div>
+      {/* <div className="logo">{user && <NavLink to="/">Store</NavLink>}</div> */}
+<div className="logo"><NavLink to="">Store</NavLink></div>
       <div className="nav">
         <NavLink to="/" end>Home</NavLink>
         {!user && <NavLink to="/login">Login</NavLink>}

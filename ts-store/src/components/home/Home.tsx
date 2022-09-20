@@ -37,9 +37,8 @@ export const Home = () => {
 
   return (
     <div className="Products">
-      <h2>Cakes</h2>
       <header>
-        <span>
+        <span className="total">
           {products.length} {products.length === 1 ? "Cake" : "Cakes"}
         </span>
         <span>
@@ -65,7 +64,7 @@ export const Home = () => {
           />
         </form>
       </div>
-      {user && (
+      {/* {user && ( */}
         <div className="content">
           {([...filteredProducts] || []).reverse().map((product) => (
             <div key={product._id} className="product">
@@ -89,7 +88,7 @@ export const Home = () => {
             </div>
           ))}
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 };
