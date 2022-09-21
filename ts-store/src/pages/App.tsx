@@ -6,8 +6,9 @@ import { ProtectedRoute } from "./ProtectedRoute";
 import "./App.scss";
 import { NotFound } from "./NotFound";
 import { Navbar } from "./Navbar";
-import { AddProduct } from "../components/admin/AddProduct";
+import { AddProduct } from "../components/product/AddProduct";
 import { Admin } from "../components/admin/Admin";
+import { ProductDetails } from "../components/product/ProductDetails";
 
 
 function App() {
@@ -37,6 +38,11 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="/products/:id" element={
+            <ProtectedRoute>
+              <ProductDetails/>
+            </ProtectedRoute>
+          } />
           <Route path="addproduct" element={<AddProduct />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

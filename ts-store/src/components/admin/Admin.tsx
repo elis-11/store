@@ -1,7 +1,7 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import { Users } from "../users/Users";
-import { Cart } from "./Cart";
-import { Products } from "./Products";
+import { Cart } from "../product/Cart";
+import { Products } from "../product/Products";
 
 export const Admin = () => {
 

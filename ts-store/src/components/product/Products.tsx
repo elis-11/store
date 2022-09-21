@@ -4,7 +4,7 @@ import { useDataContext } from "../../context/DataProvider";
 import { deleteProductApi, getProductsApi } from "../../helpers/ApiCalls";
 import { IProduct } from "../../types/product.types";
 import { FaTrashAlt } from "react-icons/fa";
-import "./Admin.scss";
+import "../admin/Admin.scss";
 import { ProductList } from "./ProductList";
 
 export const Products = () => {

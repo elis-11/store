@@ -79,9 +79,9 @@ export const Home = () => {
               <div>{product.description}</div>
               <div className="details">
                 <div className="buy">
-                  <span>{product.price} $</span>
+                  <span>{product.price} 💲</span>
                   <Link to={`/products/${product._id}`} state={product}>
-                    Buy now
+                  🛍 Buy now
                   </Link>
                 </div>
               </div>

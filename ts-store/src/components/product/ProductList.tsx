@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
-import { deleteProductApi } from "../../helpers/ApiCalls";
+import { deleteProductApi, updateProductApi } from "../../helpers/ApiCalls";
 import { IProduct } from "../../types/product.types";
 
 type Props = {
@@ -8,9 +9,8 @@ type Props = {
 }
 
 export const ProductList = ({products}: Props) => {
-  const { user,  setProducts, errors, setErrors } = useDataContext();
+  const { user, setProducts, errors, setErrors } = useDataContext();
 
-  //! edit
 
   //! delete
   const handleDelete = async (productId: string) => {
@@ -35,16 +35,20 @@ export const ProductList = ({products}: Props) => {
           {([...products] || []).reverse().map((product) => (
             <div key={product._id} className="product">
               <div>
+                <Link to={`/products/${product._id}`} state={product}>
                 <img src={product.image} alt={product.name} />
+                </Link>
               </div>
               <div className="data">
                 <div className="name">{product.name}</div>
                 <div>{product.description}</div>
                 <div className="details">
                   <div className="buy">
-                    <span>{product.price} &euro;</span>
+                    {/* <span>{product.price} &euro;</span> */}
+                    {/* <span>{product.price} 💲 $ 🛍 € ☕ ✨ 📩</span> */}
+                    <span>{product.price} 💲 </span>
                     <Link to={`/products/${product._id}`} state={product}>
-                      BUY NOW
+                      BUY NOW 🛍
                     </Link>
                     {/* <button onClick={() => handleAddProductToCart(product)}>
                       BUY NOW
