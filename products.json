@@ -1,0 +1,265 @@
+[{
+  "_id": {
+    "$oid": "632753c594c0cbb10e9837a6"
+  },
+  "name": "Angel Foog Cake",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, molestias!",
+  "group": "flourless",
+  "price": 39.99,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663521735/aonwzwpamdmdhymh7t2q.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663521733950"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663521735657"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "632754e394c0cbb10e9837ae"
+  },
+  "name": "Chiffon Cake",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, molestias!",
+  "group": "flourless",
+  "price": 29.99,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663522019/izqtzughcd7cabv2gynx.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663522019026"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663522020333"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "632755b794c0cbb10e9837b2"
+  },
+  "name": "Biscuit Cake",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, molestias!",
+  "group": "flourless",
+  "price": 29.99,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663522232/idx25ef2qv2ztacmzhnq.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663522231500"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663522233016"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "6328bd7b36d7e29ba5ace752"
+  },
+  "name": "jkhjkh",
+  "description": "khkh",
+  "group": "trend",
+  "price": 66,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663614332/gz1rtroiaaucnz2qmabv.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663614331801"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663614333646"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "6329f238dcf9b08a2136100d"
+  },
+  "name": "Biscuit",
+  "description": "Biscuit...",
+  "group": "trend",
+  "price": 64.95,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663693369/jndpu4lykqpgctdzyqaf.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663693368586"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663693370341"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "6329f304dcf9b08a21361012"
+  },
+  "name": "Biscuit",
+  "description": "Biscuit...",
+  "group": "trend",
+  "price": 34.95,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663693573/njutrfha5upxbmfub8tc.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663693572660"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663693573853"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "6329f354dcf9b08a21361018"
+  },
+  "name": "Biscuit",
+  "description": "Biscuit...",
+  "group": "trend",
+  "price": 49.95,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663693653/qhfquj4mbuw05ybfngjs.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663693652108"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663693653942"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "632a27e1dcf9b08a213611b6"
+  },
+  "name": "Biscuit Cake",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, molestias!",
+  "group": "flourless",
+  "price": 29.99,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663707106/sqo2nncqxhn0bqzhiajk.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663707105272"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663707107301"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "632a2ad6dcf9b08a213611bd"
+  },
+  "name": "Biscuit",
+  "description": "Biscuit...",
+  "group": "trend",
+  "price": 63.95,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663707863/intnpdj8ruswk2tbobpx.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663707862667"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663707864984"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "632b469d72705a3fa7c0eeef"
+  },
+  "name": "Biscuit",
+  "description": "Biscuit...",
+  "group": "trend",
+  "price": 38.95,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663780510/u4vdsohvrxdvaba7icul.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663780509720"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663780511205"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "632b46d172705a3fa7c0eef4"
+  },
+  "name": "Biscuit",
+  "description": "Biscuit...",
+  "group": "trend",
+  "price": 43.95,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663780562/mb4arwryc6sudo38n1iw.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663780561557"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663780563298"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+},{
+  "_id": {
+    "$oid": "632b473e72705a3fa7c0eef9"
+  },
+  "name": "Biscuit",
+  "description": "Biscuit...",
+  "group": "trend",
+  "price": 38.95,
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663780672/mgqauaowqkbffvtkvbgm.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663780670749"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1663780672599"
+    }
+  },
+  "author": {
+    "$oid": "632388bcaa2249531d885099"
+  }
+}]

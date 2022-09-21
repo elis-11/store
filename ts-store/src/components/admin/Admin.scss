@@ -160,3 +160,29 @@
     }
   }
 }
+.Details{
+  // display: column;
+  margin: auto;
+  .product-details{
+    .item{
+      display: column;
+      .name {
+        text-align: left;
+      }
+      .description {
+          text-align: left;
+      }
+
+      .avatar {
+        width: 10%;
+        img{
+          width: 2.5rem;
+          border-radius: 50%;
+          &:hover {
+              width: 60px;
+          }
+          }
+        }
+    }
+  }
+}
