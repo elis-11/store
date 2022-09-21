@@ -12,6 +12,7 @@ export const Products = () => {
   const [showMsg, setShowMsg] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
+  
 
   // fetch data from backend on LOAD
   // and afterwards store them in context
@@ -68,7 +69,6 @@ export const Products = () => {
     }, 3000); // hide message again after 3 seconds
   };
 
-
   return (
     <div className="Products">
       <header>
@@ -104,7 +104,7 @@ export const Products = () => {
           {([...filteredProducts] || []).reverse().map((product) => (
             <div key={product._id} className="product">
               <div>
-                  <img src={product.image} alt={product.name} />
+                <img src={product.image} alt={product.name} />
               </div>
               <div className="data">
                 <div className="name">{product.name}</div>
@@ -128,6 +128,7 @@ export const Products = () => {
                 </div>
               </div>{" "}
               <div className="icons">
+                <div className="edit">🖊</div>
                 {/* <FaTrashAlt
                   className="delete"
                   role="button"
@@ -137,7 +138,7 @@ export const Products = () => {
                   className="delete"
                   onClick={() => handleDelete(product._id)}
                 >
-                  &#128465;
+                  🗑
                 </div>
               </div>
             </div>

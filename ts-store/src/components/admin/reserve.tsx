@@ -8,7 +8,7 @@ export const AddProduct = () => {
   const { user, products, setProducts, errors, setErrors } = useDataContext();
   const [newProduct, setNewProduct] = useState({});
   const [imagePreview, setImagePreview] = useState(
-    "https://res.cloudinary.com/dngl4djva/image/upload/v1663759014/gxya2gpyzcmzvoadmnhc.png"
+    "https://res.cloudinary.com/dngl4djva/image/upload/v1663521094/rs0p5bkdr4glfv2jztbk.png"
   );
 
   const { id } = useParams();
@@ -16,7 +16,6 @@ export const AddProduct = () => {
   const refDescription = useRef<HTMLInputElement>(null);
   const refPrice = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
-
 
   const onProductCreate: React.FocusEventHandler<HTMLFormElement> = async (
     e
@@ -43,7 +42,7 @@ export const AddProduct = () => {
     const newProductApi = await createProductApi(user.token, productNew);
     console.log(newProductApi);
     setProducts([...products, newProductApi]);
-    navigate("/");
+    navigate("products");
     refName.current.value = "";
     refDescription.current.value = "";
     refPrice.current.value = "";
@@ -83,7 +82,7 @@ export const AddProduct = () => {
             <input type="text" ref={refPrice} placeholder="Price" />
           </div>
           <button type="submit">Create</button>
-          <NavLink className="back" to="/admin">
+          <NavLink className="back" to="/products">
             Back
           </NavLink>
           {/* select image-button click handler */}

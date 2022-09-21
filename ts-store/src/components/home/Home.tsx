@@ -42,7 +42,8 @@ export const Home = () => {
           {products.length} {products.length === 1 ? "Cake" : "Cakes"}
         </span>
         <span>
-          <Link to="/cart">Cart &#128722;</Link>
+          {/* <Link to="/cart">Cart &#128722;</Link> */}
+          <Link to="/cart">Cart 🛒</Link>
         </span>
       </header>
 
@@ -65,29 +66,29 @@ export const Home = () => {
         </form>
       </div>
       {/* {user && ( */}
-        <div className="content">
-          {([...filteredProducts] || []).reverse().map((product) => (
-            <div key={product._id} className="product">
-              <div>
-                <Link to={`/products/${product._id}`} state={product}>
-                  <img src={product.image} />
-                </Link>
-              </div>
-              <div className="data">
-                <div className="name">{product.name}</div>
-                <div>{product.description}</div>
-                <div className="details">
-                  <div className="buy">
-                    <span>{product.price} $</span>
-                    <Link to={`/products/${product._id}`} state={product}>
-                      Buy now
-                    </Link>
-                  </div>
+      <div className="content">
+        {([...filteredProducts] || []).reverse().map((product) => (
+          <div key={product._id} className="product">
+            <div>
+              <Link to={`/products/${product._id}`} state={product}>
+                <img src={product.image} />
+              </Link>
+            </div>
+            <div className="data">
+              <div className="name">{product.name}</div>
+              <div>{product.description}</div>
+              <div className="details">
+                <div className="buy">
+                  <span>{product.price} $</span>
+                  <Link to={`/products/${product._id}`} state={product}>
+                    Buy now
+                  </Link>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
       {/* )} */}
     </div>
   );
