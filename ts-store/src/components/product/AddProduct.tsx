@@ -34,6 +34,7 @@ export const AddProduct = () => {
       return setErrors("Something went wrong! Please try again...");
 
     const productNew: IProductCreate = {
+      author: user._id,
       name: refName.current.value,
       description: refDescription.current.value,
       price: refPrice.current.value,

@@ -1,17 +1,12 @@
 import mongoose from "mongoose";
 import autopopulate from "mongoose-autopopulate";
-
 const { Schema, model } = mongoose;
 
 const ProductSchema = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String },
-    author: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      autopopulate: true,
-    },
+    author: { type: mongoose.Schema.Types.ObjectId, ref: "User", autopopulate: true },
     group: {
       type: String,
       default: "trend",
