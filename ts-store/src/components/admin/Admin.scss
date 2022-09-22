@@ -118,13 +118,18 @@
             color: white;
             background: rgb(210, 212, 207);
             border: 1px solid rgb(144, 137, 137);
+            &:hover {
+            color: rgb(238, 209, 209);
+            background: rgb(203, 227, 167);
+            }
           }
         }
       }
-      .icons {
         .delete {
           cursor: pointer;
-        }
+          &:hover {
+            font-size: 1.1rem;
+          }
       }
     }
   }
@@ -161,26 +166,49 @@
   }
 }
 .Details{
-  // display: column;
-  margin: auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .product-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
     .item{
       display: column;
       .name {
-        text-align: left;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2rem;
+        padding: .5em;
       }
       .description {
-          text-align: left;
+          text-align: center;
+        padding: .7em;
+
       }
 
-      .avatar {
-        width: 10%;
+      .create {
+        // width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 1em;
         img{
           width: 2.5rem;
           border-radius: 50%;
-          &:hover {
-              width: 60px;
+          padding-right: .5em; ;
+          // &:hover {
+              // width: 60px;
+          // }
           }
+          .author{
+
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+          .date{
+            padding-right: 2rem;
           }
         }
     }

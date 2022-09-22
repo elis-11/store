@@ -82,20 +82,14 @@ export const Users = () => {
             </div>
             <div className="name">{user.name}</div>
             <div className="email">{user.email}</div>
-            <div className="icons">
               <div
-                // className="delete"
-                style={{
-                  fontSize: ".8rem",
-                  marginRight: "1rem",
-                  cursor: "pointer",
-                }}
+                className="delete"
                 onClick={() => handleDelete(user._id)}
               >
-                &#128465;
+                {/* &#128465; */}
+                🗑
               </div>
             </div>
-          </div>
         ))}
       </div>
       <div className="errors">{errors}</div>

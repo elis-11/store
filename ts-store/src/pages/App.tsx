@@ -9,6 +9,7 @@ import { Navbar } from "./Navbar";
 import { AddProduct } from "../components/product/AddProduct";
 import { Admin } from "../components/admin/Admin";
 import { ProductDetails } from "../components/product/ProductDetails";
+import { Cart } from "../components/product/Cart";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
               <ProductDetails/>
             </ProtectedRoute>
           } />
+          <Route path="cart" element={<Cart/>} />
           <Route path="addproduct" element={<AddProduct />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

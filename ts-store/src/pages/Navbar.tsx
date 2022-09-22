@@ -23,6 +23,7 @@ export const Navbar = () => {
         <NavLink to="/" end>Home</NavLink>
         {!user && <NavLink to="/login">Login</NavLink>}
         {!user && <NavLink to="/signup">Signup</NavLink>}
+        <NavLink to="/cart">Cart</NavLink>
         {user?.role === "admin" && <NavLink to="/admin">Admin</NavLink>}
         {user && (
           <NavLink to="#" onClick={logout}>

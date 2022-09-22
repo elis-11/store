@@ -70,9 +70,9 @@ export const Home = () => {
         {([...filteredProducts] || []).reverse().map((product) => (
           <div key={product._id} className="product">
             <div>
-              <Link to={`/products/${product._id}`} state={product}>
+              {/* <Link to={`/products/${product._id}`} state={product}> */}
                 <img src={product.image} />
-              </Link>
+              {/* </Link> */}
             </div>
             <div className="data">
               <div className="name">{product.name}</div>
@@ -80,8 +80,9 @@ export const Home = () => {
               <div className="details">
                 <div className="buy">
                   <span>{product.price} 💲</span>
-                  <Link to={`/products/${product._id}`} state={product}>
-                  🛍 Buy now
+                  {/* <Link to={`/products/${product._id}`} state={product}> */}
+                  <Link to={`/cart`}>
+                  🛍 Buy
                   </Link>
                 </div>
               </div>

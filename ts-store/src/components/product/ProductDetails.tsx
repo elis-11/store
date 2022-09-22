@@ -45,13 +45,17 @@ export const ProductDetails = () => {
           <div className="name">{product?.name}</div>
           <div className="description">{product?.description}</div>
           <div className="price">{product?.price} 💲</div>
-          <div className="author">
+          <div className="create">
             <span className="avatar" >
             <img src={product?.author?.avatar} />
             </span>
-            <span>
-              {product?.author?.name} {product?.createdAt?.slice(0, 10)}
+            <span className="author">
+              {product?.author?.name} 
+              </span>
+              <span className="date">
+              {product?.createdAt?.slice(0, 10)}
             </span>
+            <div className="edit">🖊</div>
           </div>
         </div>
       </div>

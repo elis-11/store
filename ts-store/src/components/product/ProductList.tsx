@@ -48,7 +48,7 @@ export const ProductList = ({products}: Props) => {
                     {/* <span>{product.price} 💲 $ 🛍 € ☕ ✨ 📩</span> */}
                     <span>{product.price} 💲 </span>
                     <Link to={`/products/${product._id}`} state={product}>
-                      BUY NOW 🛍
+                      BUY 🛍
                     </Link>
                     {/* <button onClick={() => handleAddProductToCart(product)}>
                       BUY NOW
@@ -62,8 +62,6 @@ export const ProductList = ({products}: Props) => {
                   </div>
                 </div>
               </div>{" "}
-              <div className="icons">
-                <div className="edit">🖊</div>
                 {/* <FaTrashAlt
                   className="delete"
                   role="button"
@@ -76,7 +74,6 @@ export const ProductList = ({products}: Props) => {
                   🗑
                 </div>
               </div>
-            </div>
           ))}
         </div>
       )}

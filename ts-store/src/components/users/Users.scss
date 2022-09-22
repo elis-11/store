@@ -44,6 +44,14 @@
                 width: 60%;
                 text-align: left;
             }
+            .delete{
+              font-size: 0.8rem;
+              margin-right: 1rem;
+              cursor: pointer;
+              &:hover {
+                font-size: .9rem;
+              }
+            }
         }
 
     }
