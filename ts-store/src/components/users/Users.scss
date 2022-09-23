@@ -17,18 +17,18 @@
       display: flex;
       justify-content: space-between;
       border: 1px solid #fff;
-      height: 2rem;
+      height: 3.5rem;
       place-items: center;
       &:hover {
         background-color: rgb(249, 249, 246);
       }
       .avatar {
-        width: 10%;
+        width: 13%;
         img {
-          width: 30px;
+          width: 2.8rem;
           border-radius: 50%;
           &:hover {
-            width: 60px;
+            width: 5rem;
           }
         }
       }
@@ -41,11 +41,11 @@
         text-align: left;
       }
       .delete {
-        font-size: 0.8rem;
+        font-size: 1.4rem;
         margin-right: 1rem;
         cursor: pointer;
         &:hover {
-          font-size: 0.9rem;
+          font-size: 1.5rem;
         }
       }
     }

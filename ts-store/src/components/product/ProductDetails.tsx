@@ -135,7 +135,7 @@ export const ProductDetails = () => {
             <div className="description">{product?.description}</div>
             <div className="price">{product?.price} 💲</div>
             <div className="create">
-              <h4>Created by</h4>
+              <h4>Created by:</h4>
               <span className="avatar">
                 <img src={product?.author?.avatar} />
               </span>
@@ -143,7 +143,7 @@ export const ProductDetails = () => {
               <span className="date">{product?.createdAt?.slice(0, 10)}</span>
             </div>
             <div className="create">
-              <h4>Updated by</h4>
+              <h4>Updated by:</h4>
               <span className="avatar">
                 <img src={product?.author?.avatar} />
               </span>

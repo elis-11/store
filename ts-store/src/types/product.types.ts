@@ -13,7 +13,7 @@ export interface IProduct {
 
 export interface IProductCreate {
   name: string;
-  author: string;
+  author?: string;
   description?: string;
   price?: string;
   image?: string;
@@ -21,6 +21,7 @@ export interface IProductCreate {
 
 export interface IProductUpdate {
   name?: string;
+  author?: string;
   description?: string;
   price?: string;
   image?: string;

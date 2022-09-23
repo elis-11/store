@@ -194,14 +194,13 @@
         display: flex;
         justify-content: space-evenly;
         padding-top: 1em;
-        img{
-          width: 2.5rem;
+        img {
+          width: 2rem;
           border-radius: 50%;
-          padding-right: .5em; ;
-          // &:hover {
-              // width: 60px;
-          // }
+          &:hover {
+            width: 3rem;
           }
+        }
           .author{
 
             padding-left: 2rem;
