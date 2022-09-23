@@ -3,7 +3,7 @@ import { IUser } from "./user.types";
 export interface IProduct {
   _id: string;
   name: string;
-  author: IUser;
+  author?: IUser;
   description?: string;
   price?: string;
   image?: string;

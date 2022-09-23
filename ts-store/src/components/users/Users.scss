@@ -22,37 +22,32 @@
       &:hover {
         background-color: rgb(249, 249, 246);
       }
-    //   .item {
-    //     width: 100%;
-    //     display: flex;
-    //     justify-content: space-around;
-        .avatar {
-          width: 10%;
-          img{
-            width: 30px;
-            border-radius: 50%;
-            &:hover {
-                width: 60px;
-            }
-            }
+      .avatar {
+        width: 10%;
+        img {
+          width: 30px;
+          border-radius: 50%;
+          &:hover {
+            width: 60px;
           }
-          .name {
-              width: 30%;
-              text-align: left;
-            }
-            .email {
-                width: 60%;
-                text-align: left;
-            }
-            .delete{
-              font-size: 0.8rem;
-              margin-right: 1rem;
-              cursor: pointer;
-              &:hover {
-                font-size: .9rem;
-              }
-            }
         }
-
+      }
+      .name {
+        width: 30%;
+        text-align: left;
+      }
+      .email {
+        width: 60%;
+        text-align: left;
+      }
+      .delete {
+        font-size: 0.8rem;
+        margin-right: 1rem;
+        cursor: pointer;
+        &:hover {
+          font-size: 0.9rem;
+        }
+      }
     }
   }
+}

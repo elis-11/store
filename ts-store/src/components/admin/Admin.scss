@@ -135,7 +135,7 @@
   }
 }
 .Add {
-  .create {
+  .created {
     img {
       width: 25%;
     }
@@ -212,5 +212,21 @@
           }
         }
     }
+    a, .edit {
+      border-radius: 5px;
+      border: none;
+      font-size: 0.7rem;
+      color: rgb(29, 27, 27);
+      background-color: rgb(240, 216, 216);
+      text-decoration: none;
+      padding: 0.7rem 1.8rem;
+      margin-left: 3rem;
+      text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
+      &:hover {
+        box-shadow: 1px 1px 2px white, 0 0 15px white, 0 0 15px white;
+        text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
+      }
+    }
+
   }
 }

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { IContextData } from "../../types/user.types";
+import {IProduct} from "../../types/product.types";
 
 export const Cart = () => {
 
@@ -15,14 +16,14 @@ export const Cart = () => {
         Da, es bei mir, gar nicht functioniert, leider... ⚡ ☕
       </div>
     </div> */}
-      {context.items.length === 0 && (
+      {/* {context.items.length === 0 && ( */}
         <div className="empty" style={{marginTop: "5rem"}}>
           <img src="/images/bag12.png" alt="empty" />
           <h3>Whoops... Your bag is empty</h3>
           <h4>Looks like you haven't added anything to your bag yet.</h4>
         </div>
-      )}
-      {context.items.length > 0 && (
+      {/* )} */}
+      {/* {context.items.length > 0 && (
         <div className="wrapper">
           <div className="cart">
             {context.items.map((product) => {
@@ -41,7 +42,7 @@ export const Cart = () => {
                     <input
                       type="number"
                       value={product.amount}
-                      readonly
+                      readOnly
                       disabled
                     />
                     <button
@@ -86,7 +87,7 @@ export const Cart = () => {
 
           </section>
         </div>
-      )}
+      )} */}
     </>
   );
 };

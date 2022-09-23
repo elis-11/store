@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { MdCancel, MdSaveAlt } from "react-icons/md";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { getProductApi, updateProductApi } from "../../helpers/ApiCalls";
 import { IProduct, IProductUpdate } from "../../types/product.types";
@@ -91,21 +91,42 @@ export const ProductDetails = () => {
               defaultValue={product.name}
               type="text"
               ref={refProductName}
+              style={{
+                height: "2em",
+                paddingLeft: "1rem",
+                background: "transparent",
+              }}
             />
             <input
               defaultValue={product.description}
               type="text"
               ref={refProductDescription}
+              style={{
+                height: "2em",
+                paddingLeft: "1rem",
+                background: "transparent",
+              }}
             />
             {/* <textarea defaultValue={product.description} type="text" ref={refProductDescription}/> */}
             <input
               defaultValue={product.price}
               type="text"
               ref={refProductPrice}
+              style={{
+                height: "2em",
+                paddingLeft: "1rem",
+                background: "transparent",
+              }}
             />
             <div className="edit-icons">
-              <MdSaveAlt className="save" onClick={onProductUpdate} />
-              <MdCancel className="cancel" onClick={() => setEditMode(false)} />
+              <MdSaveAlt
+                onClick={onProductUpdate}
+                style={{ fontSize: "1.5rem", color: "grey", margin: ".5em" }}
+              />
+              <MdCancel
+                onClick={() => setEditMode(false)}
+                style={{ fontSize: "1.5rem", color: "grey", margin: ".5em" }}
+              />
             </div>
           </div>
         ) : (
@@ -114,16 +135,32 @@ export const ProductDetails = () => {
             <div className="description">{product?.description}</div>
             <div className="price">{product?.price} 💲</div>
             <div className="create">
+              <h4>Created by</h4>
               <span className="avatar">
                 <img src={product?.author?.avatar} />
               </span>
               <span className="author">{product?.author?.name}</span>
               <span className="date">{product?.createdAt?.slice(0, 10)}</span>
             </div>
+            <div className="create">
+              <h4>Updated by</h4>
+              <span className="avatar">
+                <img src={product?.author?.avatar} />
+              </span>
+              <span className="author">{product?.author?.name}</span>
+              <span className="date">{product?.updatedAt?.slice(0, 10)}</span>
+            </div>
           </div>
         )}
-        <div className="edit" onClick={() => setEditMode(!editMode)} style={{cursor: 'pointer'}}>
-          🖊
+        <div className="action">
+          <span>
+            <button className="edit" onClick={() => setEditMode(!editMode)} >
+              Edit 🖊
+            </button>
+          </span>
+          <span>
+            <Link to="/admin">Back</Link>
+          </span>
         </div>
       </div>
     </div>
