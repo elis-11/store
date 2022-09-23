@@ -35,4 +35,9 @@ export type IContextData ={
     setErrors: React.Dispatch<React.SetStateAction<string>>
     products: IProduct[]
     setProducts: React.Dispatch<React.SetStateAction<IProduct[]>>
+    item: IProduct[]
+    items: IProduct[]
+    totalPrice: React.Dispatch<React.SetStateAction<IProduct[]>>
+    addItem: React.Dispatch<React.SetStateAction<IProduct[]>>
+    removeItem: React.Dispatch<React.SetStateAction<IProduct[]>>
 }
