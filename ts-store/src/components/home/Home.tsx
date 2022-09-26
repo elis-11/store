@@ -2,10 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { getProductsApi } from "../../helpers/ApiCalls";
+import { IContextData } from "../../types/user.types";
 import "../admin/Admin.scss";
 
 export const Home = () => {
-  const { user, products, setProducts, errors, setErrors } = useDataContext();
+  const { user, products, setProducts, errors, setErrors,  } = useDataContext();
+  const context: IContextData = useDataContext();
+
   const [search, setSearch] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -42,7 +45,6 @@ export const Home = () => {
           {products.length} {products.length === 1 ? "Cake" : "Cakes"}
         </span>
         <span>
-          {/* <Link to="/cart">Cart &#128722;</Link> */}
           <Link to="/cart">Cart 🛒</Link>
         </span>
       </header>
@@ -81,9 +83,10 @@ export const Home = () => {
                 <div className="buy">
                   <span>{product.price} 💲</span>
                   {/* <Link to={`/products/${product._id}`} state={product}> */}
-                  <Link to={`/cart`}>
-                  🛍 Buy
-                  </Link>
+                  {/* <Link to={`/cart`}>🛍 Buy</Link> */}
+                  <div>
+                    <button type="button" onClick={() => context.addItem(product)}>🛍 Buy</button>
+                  </div>
                 </div>
               </div>
             </div>

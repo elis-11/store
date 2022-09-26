@@ -5,17 +5,18 @@ export interface IProduct {
   name: string;
   author?: IUser;
   description?: string;
-  price?: string;
+  price: number;
   image?: string;
   createdAt: string;
   updatedAt: string;
+  amount: number;
 }
 
 export interface IProductCreate {
   name: string;
   author?: string;
   description?: string;
-  price?: string;
+  price?: number;
   image?: string;
 }
 
@@ -23,6 +24,12 @@ export interface IProductUpdate {
   name?: string;
   author?: string;
   description?: string;
-  price?: string;
+  price?: number;
   image?: string;
 }
+
+export interface ICartItem {
+  product: IProduct;
+  amount: number;
+}
+

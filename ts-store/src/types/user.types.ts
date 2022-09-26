@@ -1,4 +1,4 @@
-import {IProduct} from './product.types'
+import {ICartItem, IProduct} from './product.types'
 
 export interface IUser {
     _id: string;
@@ -35,9 +35,8 @@ export type IContextData ={
     setErrors: React.Dispatch<React.SetStateAction<string>>
     products: IProduct[]
     setProducts: React.Dispatch<React.SetStateAction<IProduct[]>>
-    // item: IProduct[]
-    // items: IProduct[]
-    // totalPrice: React.Dispatch<React.SetStateAction<IProduct[]>>
-    // addToCart: React.Dispatch<React.SetStateAction<IProduct[]>>
-    // removeFromCart: React.Dispatch<React.SetStateAction<IProduct[]>>
+    items: IProduct[]
+    totalPrice: any
+    addItem: (item: IProduct) => void
+    removeItem: (id: string) => void
 }

@@ -46,7 +46,7 @@ export const ProductDetails = () => {
     const productUpdate: IProductUpdate = {
       name: refProductName.current.value,
       description: refProductDescription.current.value,
-      price: refProductPrice.current.value,
+      price: parseFloat(refProductPrice.current.value),
     };
 
     // image update => if user picked a new image => place it inside update
