@@ -15,7 +15,7 @@ export const ProductDetails = () => {
   const { id } = useParams();
 
   const refProductName = useRef<HTMLInputElement>(null);
-  const refProductDescription = useRef<HTMLInputElement>(null);
+  const refProductDescription = useRef<HTMLTextAreaElement>(null);
   // const refProductDescription = useRef<HTMLTextAreaElement>(null);
   const refProductPrice = useRef<HTMLInputElement>(null);
 
@@ -91,32 +91,16 @@ export const ProductDetails = () => {
               defaultValue={product.name}
               type="text"
               ref={refProductName}
-              style={{
-                height: "2em",
-                paddingLeft: "1rem",
-                background: "transparent",
-              }}
             />
-            <input
+            <textarea
               defaultValue={product.description}
-              type="text"
               ref={refProductDescription}
-              style={{
-                height: "2em",
-                paddingLeft: "1rem",
-                background: "transparent",
-              }}
             />
-            {/* <textarea defaultValue={product.description} type="text" ref={refProductDescription}/> */}
+            {/* <textarea defaultValue={product.description} ref={refProductDescription}/> */}
             <input
               defaultValue={product.price}
               type="text"
               ref={refProductPrice}
-              style={{
-                height: "2em",
-                paddingLeft: "1rem",
-                background: "transparent",
-              }}
             />
             <div className="edit-icons">
               <MdSaveAlt
@@ -133,7 +117,7 @@ export const ProductDetails = () => {
           <div className="item">
             <div className="name">{product?.name}</div>
             <div className="description">{product?.description}</div>
-            <div className="price">{product?.price} 💲</div>
+            <div className="price">price: {product?.price} 💲</div>
             <div className="create">
               <h4>Created by:</h4>
               <span className="avatar">
@@ -154,7 +138,7 @@ export const ProductDetails = () => {
         )}
         <div className="action">
           <span>
-            <button className="edit" onClick={() => setEditMode(!editMode)} >
+            <button className="edit" onClick={() => setEditMode(!editMode)}>
               Edit 🖊
             </button>
           </span>
