@@ -37,7 +37,7 @@ export const AddProduct = () => {
       author: user._id,
       name: refName.current.value,
       description: refDescription.current.value,
-      price: refPrice.current.value,
+      price: parseFloat(refPrice.current.value),
       image: imagePreview,
     };
     console.log(productNew);
