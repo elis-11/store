@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { getProductsApi } from "../../helpers/ApiCalls";
 import { IContextData } from "../../types/user.types";
-import "../admin/Admin.scss";
+import "./Home.scss";
 
 export const Home = () => {
   const { user, products, setProducts, errors, setErrors,  } = useDataContext();
@@ -39,7 +39,7 @@ export const Home = () => {
   );
 
   return (
-    <div className="Products">
+    <div className="Home">
       <header>
         <span className="total">
           {products.length} {products.length === 1 ? "Cake" : "Cakes"}
@@ -78,15 +78,14 @@ export const Home = () => {
             </div>
             <div className="data">
               <div className="name">{product.name}</div>
-              <div>{product.description}</div>
+              <div className="description">{product.description}</div>
               <div className="details">
                 <div className="buy">
                   <span>{product.price} 💲</span>
-                  {/* <Link to={`/products/${product._id}`} state={product}> */}
-                  {/* <Link to={`/cart`}>🛍 Buy</Link> */}
-                  <div>
+                  {/* <Link to={`/products/${product._id}`} state={product}> 🛍 Buy</Link> */}
+                  <span>
                     <button type="button" onClick={() => context.addItem(product)}>🛍 Buy</button>
-                  </div>
+                  </span>
                 </div>
               </div>
             </div>

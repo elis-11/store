@@ -9,7 +9,7 @@ import { Navbar } from "./Navbar";
 import { AddProduct } from "../components/product/AddProduct";
 import { Admin } from "../components/admin/Admin";
 import { ProductDetails } from "../components/product/ProductDetails";
-import { Cart } from "../components/product/Cart";
+import { Cart } from "../components/cart/Cart";
 
 
 function App() {

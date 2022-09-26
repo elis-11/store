@@ -48,7 +48,7 @@ export const ProductList = ({products}: Props) => {
                     {/* <span>{product.price} 💲 $ 🛍 € ☕ ✨ 📩</span> */}
                     <span>{product.price} 💲 </span>
                     <Link to={`/products/${product._id}`} state={product}>
-                      BUY 🛍
+                      Details
                     </Link>
                     {/* <button onClick={() => handleAddProductToCart(product)}>
                       BUY NOW

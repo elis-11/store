@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { IContextData } from "../../types/user.types";
 import { IProduct, ICartItem } from "../../types/product.types";
+import './Cart.scss';
 
 export const Cart = () => {
   const context: IContextData = useDataContext();
@@ -23,8 +24,8 @@ export const Cart = () => {
         </div>
       )}
       {context.items.length > 0 && (
-        <div className="wrapper">
-          <div className="cart">
+        <div className="Cart">
+          <div className="content">
             {context.items.map((cartItem) => {
               return (
                 <div className="product" key={cartItem._id}>
@@ -53,7 +54,7 @@ export const Cart = () => {
                     </button>
                   </div>
                   <div className="price">
-                    {`$${cartItem.price * cartItem.amount}`}
+                    {`💲${cartItem.price * cartItem.amount}`}
                   </div>
                 </div>
               );
@@ -61,20 +62,20 @@ export const Cart = () => {
           </div>
 
           <section className="summary">
-            <h3>Order Summary</h3>
-            <div>
-              <div>
-                <div>Order</div>
+            <h2>Order Summary</h2>
+            <div className="content">
+              <div className="order">
+                <span>Order</span>
 
                 <span>{`$${context.totalPrice}`}</span>
               </div>
 
-              <div>
+              <div className="order">
                 <span>Delivery</span>
                 <span>$10</span>
               </div>
 
-              <div>
+              <div className="order total">
                 <span>Total</span>
                 <span>{`$${context.totalPrice + 10}`}</span>
               </div>
