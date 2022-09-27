@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { IContextData } from "../../types/user.types";
 import { IProduct, ICartItem } from "../../types/product.types";
-import './Cart.scss';
+import "./Cart.scss";
 
 export const Cart = () => {
   const context: IContextData = useDataContext();
+  const orderTotal = context.totalPrice.toFixed(2);
 
   return (
     <>
@@ -77,8 +78,8 @@ export const Cart = () => {
 
               <div className="order total">
                 <span>Total</span>
-                {/* <span>{`$${context.totalPrice.toFixed(2) + 10}`}</span> */}
-                <span>{`$${context.totalPrice.toFixed(2)}`}</span>
+                <span>{`$${10 + parseFloat(orderTotal)}`}</span>
+                {/* <span>{`$${context.totalPrice.toFixed(2)}`}</span> */}
               </div>
             </div>
 
