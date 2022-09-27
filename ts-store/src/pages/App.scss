@@ -51,7 +51,6 @@ code {
         rgba(0, 0, 0, 0.2) 0%,
         rgba(0, 0, 0, 0.9) 66%
       );
-
     }
     img {
       opacity: 1;
@@ -72,6 +71,7 @@ code {
     p {
       font-size: 0.8rem;
       padding: 1rem;
+      text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
     }
     a {
       border-radius: 5px;
@@ -124,9 +124,13 @@ code {
       color: rgb(235, 216, 216);
     }
   }
-  .avatar {
-    width: 10%;
-    img {
+  .images {
+    width: 20%;
+    .bag {
+      width: 2.5rem;
+      margin-right: .5em;
+    }
+    .avatar {
       width: 2.5rem;
       border-radius: 50%;
       border: 1px solid #ccc;
@@ -134,4 +138,3 @@ code {
     }
   }
 }
-

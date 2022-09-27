@@ -54,7 +54,7 @@ export const Cart = () => {
                     </button>
                   </div>
                   <div className="price">
-                    {`💲${cartItem.price * cartItem.amount}`}
+                    {`💲${(cartItem.price * cartItem.amount).toFixed(2)}`}
                   </div>
                 </div>
               );
@@ -67,7 +67,7 @@ export const Cart = () => {
               <div className="order">
                 <span>Order</span>
 
-                <span>{`$${context.totalPrice}`}</span>
+                <span>{`$${context.totalPrice.toFixed(2)}`}</span>
               </div>
 
               <div className="order">
@@ -77,7 +77,8 @@ export const Cart = () => {
 
               <div className="order total">
                 <span>Total</span>
-                <span>{`$${context.totalPrice + 10}`}</span>
+                {/* <span>{`$${context.totalPrice.toFixed(2) + 10}`}</span> */}
+                <span>{`$${context.totalPrice.toFixed(2)}`}</span>
               </div>
             </div>
 

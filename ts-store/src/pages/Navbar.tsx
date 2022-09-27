@@ -18,12 +18,15 @@ export const Navbar = () => {
   return (
     <div className="Navbar">
       {/* <div className="logo">{user && <NavLink to="/">Store</NavLink>}</div> */}
-<div className="logo"><NavLink to="">Store</NavLink></div>
+      <div className="logo">
+        <NavLink to="">Store</NavLink>
+      </div>
       <div className="nav">
-        <NavLink to="/" end>Home</NavLink>
+        <NavLink to="/" end>
+          Home
+        </NavLink>
         {!user && <NavLink to="/login">Login</NavLink>}
         {!user && <NavLink to="/signup">Signup</NavLink>}
-        <NavLink to="/cart">Cart</NavLink>
         {user?.role === "admin" && <NavLink to="/admin">Admin</NavLink>}
         {user && (
           <NavLink to="#" onClick={logout}>
@@ -31,10 +34,13 @@ export const Navbar = () => {
           </NavLink>
         )}
       </div>
-      <div className="avatar">
+      <div className="images">
+        <NavLink to="/cart">
+          <img className="bag" src="/images/bag12.png" alt="bag" />
+        </NavLink>
         {user && (
           <NavLink to="/">
-            <img src={user.avatar} />
+            <img className="avatar" src={user.avatar} />
           </NavLink>
         )}
       </div>
