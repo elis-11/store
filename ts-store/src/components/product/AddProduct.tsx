@@ -3,12 +3,13 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { createProductApi } from "../../helpers/ApiCalls";
 import { IProductCreate } from "../../types/product.types";
+import "../admin/Admin.scss";
 
 export const AddProduct = () => {
   const { user, products, setProducts, errors, setErrors } = useDataContext();
   const [newProduct, setNewProduct] = useState({});
   const [imagePreview, setImagePreview] = useState(
-    "https://res.cloudinary.com/dngl4djva/image/upload/v1663759014/gxya2gpyzcmzvoadmnhc.png"
+    "https://res.cloudinary.com/dngl4djva/image/upload/v1664380475/wgh3ehyrmomoeibrh8ul.png"
   );
 
   const { id } = useParams();
@@ -16,7 +17,6 @@ export const AddProduct = () => {
   const refDescription = useRef<HTMLInputElement>(null);
   const refPrice = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
-
 
   const onProductCreate: React.FocusEventHandler<HTMLFormElement> = async (
     e

@@ -14,10 +14,10 @@ export interface IProduct {
 
 export interface IProductCreate {
   name: string;
-  author?: string;
-  description?: string;
-  price?: number;
-  image?: string;
+  author: string;
+  description: string;
+  price: number;
+  image: string;
 }
 
 export interface IProductUpdate {
