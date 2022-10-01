@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .Home {
   display: column;
   justify-content: center;
@@ -29,6 +32,7 @@
       padding: 0.7rem 1.3rem;
       text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
       &:hover {
+        background-color: rgb(229, 193, 193);
         box-shadow: 1px 1px 2px white, 0 0 15px white, 0 0 15px white;
         text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
       }
@@ -82,23 +86,45 @@
           justify-content: space-evenly;
           padding-top: 1rem;
           .buy {
+            width: 100%;
             display: flex;
             justify-content: space-evenly;
             padding-top: 1rem;
-            .price {
-              width: 40%;
-            }
+            // .price {
+              // width: 40%;
+            // }
             button {
-              width: 60%;
-              margin-left: 5rem;
-              padding: 0.3rem 1rem;
+              margin: 0;
+
+              border-radius: 5px;
+              border: none;
+              font-size: 0.7rem;
+              color: rgb(29, 27, 27);
+              // background-color: rgb(240, 216, 216);
+              background-color: rgb(203, 227, 167);
               text-decoration: none;
-              color: white;
-              background: rgb(210, 212, 207);
-              border: 1px solid rgb(144, 137, 137);
+              padding: 0.7rem 2rem;
+              text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
               &:hover {
-                color: rgb(99, 184, 97);
-                background: rgb(203, 227, 167);
+              background-color: rgb(179, 204, 142);
+              box-shadow: 1px 1px 1px silver, 0 0 5px silver, 0 0 5px silver;
+              text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;      
+              }
+            }
+            a {
+              margin: 0;
+              border-radius: 5px;
+              border: none;
+              font-size: 0.7rem;
+              color: rgb(29, 27, 27);
+              background-color: rgb(240, 216, 216);
+              text-decoration: none;
+              padding: 0.7rem 2rem;
+              text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;
+              &:hover {
+                background-color: rgb(229, 193, 193);
+                box-shadow: 1px 1px 1px silver, 0 0 5px silver, 0 0 5px silver;
+                text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 15px white;        
               }
             }
           }

@@ -4,6 +4,7 @@ export interface IProduct {
   _id: string;
   name: string;
   author?: IUser;
+  updater?: IUser;
   description?: string;
   price: number;
   image?: string;
@@ -23,6 +24,8 @@ export interface IProductCreate {
 export interface IProductUpdate {
   name?: string;
   author?: string;
+  updater?: string;
+  // updater?: IUser;
   description?: string;
   price?: number;
   image?: string;

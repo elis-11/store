@@ -7,6 +7,7 @@ const ProductSchema = new Schema(
     name: { type: String, required: true },
     description: { type: String },
     author: { type: mongoose.Schema.Types.ObjectId, ref: "User", autopopulate: true },
+    updater: { type: mongoose.Schema.Types.ObjectId, ref: "User", autopopulate: true },
     group: {
       type: String,
       default: "trend",

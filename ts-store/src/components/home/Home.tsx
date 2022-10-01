@@ -6,7 +6,7 @@ import { IContextData } from "../../types/user.types";
 import "./Home.scss";
 
 export const Home = () => {
-  const { user, products, setProducts, errors, setErrors,  } = useDataContext();
+  const { user, products, setProducts, errors, setErrors } = useDataContext();
   const context: IContextData = useDataContext();
 
   const [search, setSearch] = useState("");
@@ -73,7 +73,7 @@ export const Home = () => {
           <div key={product._id} className="product">
             <div>
               {/* <Link to={`/products/${product._id}`} state={product}> */}
-                <img src={product.image} />
+              <img src={product.image} />
               {/* </Link> */}
             </div>
             <div className="data">
@@ -84,7 +84,15 @@ export const Home = () => {
                   <span>{product.price} 💲</span>
                   {/* <Link to={`/products/${product._id}`} state={product}> 🛍 Buy</Link> */}
                   <span>
-                    <button type="button" onClick={() => context.addItem(product)}>🛍 Buy</button>
+                    <button
+                      type="button"
+                      onClick={() => context.addItem(product)}
+                    >
+                      Buy 🛍 
+                    </button>
+                  </span>
+                  <span>
+                    <Link to="/cart">Cart 🛒</Link>
                   </span>
                 </div>
               </div>

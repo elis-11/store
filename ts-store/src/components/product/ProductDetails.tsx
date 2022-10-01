@@ -44,6 +44,7 @@ export const ProductDetails = () => {
 
     // update object for sending to API
     const productUpdate: IProductUpdate = {
+      updater: user._id,
       name: refProductName.current.value,
       description: refProductDescription.current.value,
       price: parseFloat(refProductPrice.current.value),
@@ -118,6 +119,7 @@ export const ProductDetails = () => {
             <div className="name">{product?.name}</div>
             <div className="description">{product?.description}</div>
             <div className="price">price: {product?.price} 💲</div>
+
             <div className="create">
               <h4>Created by:</h4>
               <span className="avatar">
@@ -126,12 +128,13 @@ export const ProductDetails = () => {
               <span className="author">{product?.author?.name}</span>
               <span className="date">{product?.createdAt?.slice(0, 10)}</span>
             </div>
+
             <div className="create">
               <h4>Updated by:</h4>
               <span className="avatar">
-                <img src={product?.author?.avatar} />
+                <img src={product?.updater?.avatar} />
               </span>
-              <span className="author">{product?.author?.name}</span>
+              <span className="author">{product?.updater?.name}</span>
               <span className="date">{product?.updatedAt?.slice(0, 10)}</span>
             </div>
           </div>
