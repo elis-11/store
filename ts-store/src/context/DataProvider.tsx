@@ -26,7 +26,9 @@ const cartReduser = (state: any, action: any) => {
     const updatedTotalPrice =
       state.totalPrice + action.item.price * action.item.amount;
 
-    const index = state.items.findIndex((item: IProduct) => item._id === action.item._id);
+    const index = state.items.findIndex(
+      (item: IProduct) => item._id === action.item._id
+    );
     const existingItem = state.items[index];
     let updatedItems;
 
@@ -60,7 +62,9 @@ const cartReduser = (state: any, action: any) => {
 
     let updatedItems;
     if (existingItem.amount === 1) {
-      updatedItems = state.items.filter((item: IProduct) => item._id !== action.id);
+      updatedItems = state.items.filter(
+        (item: IProduct) => item._id !== action.id
+      );
     } else {
       const updatedItem = { ...existingItem, amount: existingItem.amount - 1 };
       updatedItems = [...state.items];
@@ -94,13 +98,13 @@ export const DataProvider = ({ children }: Props) => {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [cartState, dispatchCartAction] = useReducer(cartReduser, initialState);
 
-  const addToCart = (item: IProduct)=>{
-    dispatchCartAction({type: "ADD", item: {...item, amount:1}})
-  }
+  const addToCart = (item: IProduct) => {
+    dispatchCartAction({ type: "ADD", item: { ...item, amount: 1 } });
+  };
 
-  const removeFromCart=(id: string)=>{
-    dispatchCartAction({type: "REMOVE", id: id})
-  }
+  const removeFromCart = (id: string) => {
+    dispatchCartAction({ type: "REMOVE", id: id });
+  };
 
   return (
     <DataContext.Provider

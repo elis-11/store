@@ -35,5 +35,6 @@ const UserSchema = new Schema(
 
 UserSchema.plugin(autopopulate)
 
-const User = model("User", UserSchema);
-export default User;
+export default mongoose.model("User", UserSchema);
+// const User = model("User", UserSchema);
+// export default User;

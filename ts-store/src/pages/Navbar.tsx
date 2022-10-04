@@ -1,10 +1,15 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDataContext } from "../context/DataProvider";
 import { deleteUserInLocalStorage } from "../helpers/LocalStorage";
-import { MdLogout } from "react-icons/md";
+import { MdBadge, MdLogout } from "react-icons/md";
+import { FaShoppingBag } from "react-icons/fa";
+import { IProduct } from "../types/product.types";
+import { IContextData } from "../types/user.types";
 
 export const Navbar = () => {
-  const { user, setUser } = useDataContext();
+  const { user, setUser, products} = useDataContext();
+  const context: IContextData = useDataContext();
+
 
   const navigate = useNavigate();
 
@@ -14,6 +19,10 @@ export const Navbar = () => {
     setUser(undefined);
     navigate("/login");
   };
+
+  //! const numberOfItems = context.items.reduce((previousValue, currentValue: number) =>{
+  //   return previousValue + currentValue.amount;
+  // }, 0);
 
   return (
     <div className="Navbar">
@@ -36,7 +45,10 @@ export const Navbar = () => {
       </div>
       <div className="images">
         <NavLink to="/cart">
+          {/* <MdBadge badgeContent={numberOfItems}>
+            <FaShoppingBag /> */}
           <img className="bag" src="/images/bag12.png" alt="bag" />
+          {/* </MdBadge> */}
         </NavLink>
         {user && (
           <NavLink to="/">
