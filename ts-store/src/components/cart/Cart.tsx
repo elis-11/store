@@ -3,6 +3,7 @@ import { useDataContext } from "../../context/DataProvider";
 import { IContextData } from "../../types/user.types";
 import { IProduct, ICartItem } from "../../types/product.types";
 import "./Cart.scss";
+import { BiEuro } from "react-icons/bi";
 
 export const Cart = () => {
   const context: IContextData = useDataContext();
@@ -55,7 +56,8 @@ export const Cart = () => {
                     </button>
                   </div>
                   <div className="price">
-                    {`💲${(cartItem.price * cartItem.amount).toFixed(2)}`}
+                    {`${(cartItem.price * cartItem.amount).toFixed(2)}`}
+                    <BiEuro style={{fontSize:"1.5em"}}/>
                   </div>
                 </div>
               );
@@ -68,17 +70,21 @@ export const Cart = () => {
               <div className="order">
                 <span>Order</span>
 
-                <span>{`$${context.totalPrice.toFixed(2)}`}</span>
+                <span className="icon">{`${context.totalPrice.toFixed(2)}`}
+                <BiEuro/>
+                </span>
               </div>
 
               <div className="order">
                 <span>Delivery</span>
-                <span>$10</span>
+                <span className="icon">10<BiEuro/></span>
               </div>
 
               <div className="order total">
                 <span>Total</span>
-                <span>{`$${10 + parseFloat(orderTotal)}`}</span>
+                <span className="icon">{`${10 + parseFloat(orderTotal)}`}
+                <BiEuro/>
+                </span>
                 {/* <span>{`$${context.totalPrice.toFixed(2)}`}</span> */}
               </div>
             </div>

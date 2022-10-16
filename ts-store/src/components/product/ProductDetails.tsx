@@ -5,6 +5,7 @@ import { useDataContext } from "../../context/DataProvider";
 import { getProductApi, updateProductApi } from "../../helpers/ApiCalls";
 import { IProduct, IProductUpdate } from "../../types/product.types";
 import { ImagePicker } from "./ImagePicker";
+import {BiEuro} from "react-icons/bi"
 
 export const ProductDetails = () => {
   const { user, products, setProducts } = useDataContext();
@@ -118,7 +119,7 @@ export const ProductDetails = () => {
           <div className="item">
             <div className="name">{product?.name}</div>
             <div className="description">{product?.description}</div>
-            <div className="price">price: {product?.price} 💲</div>
+            <div className="price">price: {product?.price} <BiEuro/></div>
 
             <div className="create">
               <h4>Created by:</h4>

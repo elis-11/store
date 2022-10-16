@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { BiEuro } from "react-icons/bi";
+import { GiShoppingCart } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { useDataContext } from "../../context/DataProvider";
 import { getProductsApi } from "../../helpers/ApiCalls";
@@ -81,18 +83,19 @@ export const Home = () => {
               <div className="description">{product.description}</div>
               <div className="details">
                 <div className="buy">
-                  <span>{product.price} 💲</span>
-                  {/* <Link to={`/products/${product._id}`} state={product}> 🛍 Buy</Link> */}
+                  <span className="icon">{product.price} <BiEuro style={{fontSize:"1.3em", color:"gray"}}/></span>
                   <span>
                     <button
                       type="button"
                       onClick={() => context.addItem(product)}
                     >
-                      Buy 🛍 
+                      Buy now 
                     </button>
                   </span>
                   <span>
-                    <Link to="/cart">Cart 🛒</Link>
+                    <Link to="/cart">Cart 
+                    {/* <GiShoppingCart style={{fontSize:"1.8em", color:"gray", margin:"auto"}}/> */}
+                    </Link>
                   </span>
                 </div>
               </div>

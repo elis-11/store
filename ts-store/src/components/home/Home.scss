@@ -89,10 +89,12 @@
             width: 100%;
             display: flex;
             justify-content: space-evenly;
+            align-items: center;
             padding-top: 1rem;
-            // .price {
-              // width: 40%;
-            // }
+            .icon {
+              display: flex;
+              align-items: center;
+            }
             button {
               margin: 0;
 
