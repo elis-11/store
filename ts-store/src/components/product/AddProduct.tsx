@@ -9,7 +9,7 @@ export const AddProduct = () => {
   const { user, products, setProducts, errors, setErrors } = useDataContext();
   const [newProduct, setNewProduct] = useState({});
   const [imagePreview, setImagePreview] = useState(
-    "https://res.cloudinary.com/dngl4djva/image/upload/v1664380475/wgh3ehyrmomoeibrh8ul.png"
+    'https://res.cloudinary.com/dngl4djva/image/upload/v1665939005/xgtkgv6f11e0ci9rxxtl.png'
   );
 
   const { id } = useParams();
