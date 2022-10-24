@@ -9,7 +9,7 @@ import { loadUserInLocalStorage } from "../helpers/LocalStorage";
 import { IProduct } from "../types/product.types";
 import { IContextData, IUser } from "../types/user.types";
 
-//! Cart-vers
+//! Cart
 let initialState = {
   items: [],
   totalPrice: 0,

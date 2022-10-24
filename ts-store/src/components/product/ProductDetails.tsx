@@ -5,7 +5,7 @@ import { useDataContext } from "../../context/DataProvider";
 import { getProductApi, updateProductApi } from "../../helpers/ApiCalls";
 import { IProduct, IProductUpdate } from "../../types/product.types";
 import { ImagePicker } from "./ImagePicker";
-import {BiEuro} from "react-icons/bi"
+import { BiEuro } from "react-icons/bi";
 
 export const ProductDetails = () => {
   const { user, products, setProducts } = useDataContext();
@@ -119,7 +119,9 @@ export const ProductDetails = () => {
           <div className="item">
             <div className="name">{product?.name}</div>
             <div className="description">{product?.description}</div>
-            <div className="price">price: {product?.price} <BiEuro/></div>
+            <div className="price">
+              price: {product?.price} <BiEuro />
+            </div>
 
             <div className="create">
               <h4>Created by:</h4>
@@ -129,15 +131,18 @@ export const ProductDetails = () => {
               <span className="author">{product?.author?.name}</span>
               <span className="date">{product?.createdAt?.slice(0, 10)}</span>
             </div>
-
-            <div className="create">
-              <h4>Updated by:</h4>
-              <span className="avatar">
-                <img src={product?.updater?.avatar} />
-              </span>
-              <span className="author">{product?.updater?.name}</span>
-              <span className="date">{product?.updatedAt?.slice(0, 10)}</span>
-            </div>
+            {user && product.updater ? (
+              <div className="create">
+                <h4>Updated by:</h4>
+                <span className="avatar">
+                  <img src={product?.updater?.avatar} />
+                </span>
+                <span className="author">{product?.updater?.name}</span>
+                <span className="date">{product?.updatedAt?.slice(0, 10)}</span>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         )}
         <div className="action">
