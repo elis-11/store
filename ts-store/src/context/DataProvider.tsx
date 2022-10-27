@@ -20,11 +20,12 @@ if (savedCartState !== null) {
   initialState = JSON.parse(savedCartState);
 }
 console.log(savedCartState);
+
 const cartReduser = (state: any, action: any) => {
   if (action.type === "ADD") {
     console.log(action);
     const updatedTotalPrice =
-      state.totalPrice + action.item.price * action.item.amount;
+      state.totalPrice + action.item.price * action.item.amount; //amount - kol-vo
 
     const index = state.items.findIndex(
       (item: IProduct) => item._id === action.item._id

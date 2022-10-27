@@ -55,9 +55,10 @@ export const Cart = () => {
                       +
                     </button>
                   </div>
+
                   <div className="price">
                     {`${(cartItem.price * cartItem.amount).toFixed(2)}`}
-                    <BiEuro style={{fontSize:"1.5em"}}/>
+                    <BiEuro style={{ fontSize: "1.5em" }} />
                   </div>
                 </div>
               );
@@ -67,23 +68,37 @@ export const Cart = () => {
           <section className="summary">
             <h2>Order Summary</h2>
             <div className="content">
+
+            <div className="order">
+                <span>Amount</span>
+                <span>
+                  {context.items.length}{' '}
+                  {context.items.length === 1 ? "cake" : "cakes"}
+                </span>
+              </div>
+
               <div className="order">
                 <span>Order</span>
 
-                <span className="icon">{`${context.totalPrice.toFixed(2)}`}
-                <BiEuro/>
+                <span className="icon">
+                  {`${context.totalPrice.toFixed(2)}`}
+                  <BiEuro />
                 </span>
               </div>
 
               <div className="order">
                 <span>Delivery</span>
-                <span className="icon">10<BiEuro/></span>
+                <span className="icon">
+                  10
+                  <BiEuro />
+                </span>
               </div>
 
               <div className="order total">
                 <span>Total</span>
-                <span className="icon">{`${10 + parseFloat(orderTotal)}`}
-                <BiEuro/>
+                <span className="icon">
+                  {`${10 + parseFloat(orderTotal)}`}
+                  <BiEuro />
                 </span>
                 {/* <span>{`$${context.totalPrice.toFixed(2)}`}</span> */}
               </div>

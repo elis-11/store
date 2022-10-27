@@ -34,5 +34,7 @@ export interface IProductUpdate {
 export interface ICartItem {
   product: IProduct;
   amount: number;
+  previousValue?: number, 
+  currentValue?: number
 }
 

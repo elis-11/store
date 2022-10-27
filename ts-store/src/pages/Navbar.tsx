@@ -3,13 +3,17 @@ import { useDataContext } from "../context/DataProvider";
 import { deleteUserInLocalStorage } from "../helpers/LocalStorage";
 import { MdBadge, MdLogout } from "react-icons/md";
 import { FaShoppingBag } from "react-icons/fa";
-import { IProduct } from "../types/product.types";
+import { IProduct, ICartItem } from "../types/product.types";
 import { IContextData } from "../types/user.types";
 
 export const Navbar = () => {
-  const { user, setUser, products} = useDataContext();
   const context: IContextData = useDataContext();
+  const { user, setUser, products} = useDataContext();
 
+//!
+const numberOfItems = context.items.reduce((previousValue, currentValue)=>{
+  return previousValue + currentValue.amount
+}, 0)
 
   const navigate = useNavigate();
 
@@ -28,7 +32,7 @@ export const Navbar = () => {
     <div className="Navbar">
       {/* <div className="logo">{user && <NavLink to="/">Store</NavLink>}</div> */}
       <div className="logo">
-        <NavLink to="">Store</NavLink>
+        <NavLink to="">Cake Store</NavLink>
       </div>
       <div className="nav">
         <NavLink to="/" end>
@@ -47,6 +51,7 @@ export const Navbar = () => {
         <NavLink to="/cart">
           {/* <MdBadge badgeContent={numberOfItems}>
             <FaShoppingBag /> */}
+          {/* <img badgeContent={numberOfItems} className="bag" src="/images/bag12.png" alt="bag" /> */}
           <img className="bag" src="/images/bag12.png" alt="bag" />
           {/* </MdBadge> */}
         </NavLink>
