@@ -9,6 +9,11 @@ export const Cart = () => {
   const context: IContextData = useDataContext();
   const orderTotal = context.totalPrice.toFixed(2);
 
+  //!
+  const numberOfItems = context.items.reduce((previousValue, currentValue) => {
+    return previousValue + currentValue.amount;
+  }, 0);
+
   return (
     <>
       {/* <div className="Cart">
@@ -68,11 +73,11 @@ export const Cart = () => {
           <section className="summary">
             <h2>Order Summary</h2>
             <div className="content">
-
-            <div className="order">
+              <div className="order">
                 <span>Amount</span>
                 <span>
-                  {context.items.length}{' '}
+                  {/* {context.items.length}{' '} */}
+                  {numberOfItems} {''}
                   {context.items.length === 1 ? "cake" : "cakes"}
                 </span>
               </div>
