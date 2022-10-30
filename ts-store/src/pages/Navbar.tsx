@@ -1,19 +1,23 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDataContext } from "../context/DataProvider";
 import { deleteUserInLocalStorage } from "../helpers/LocalStorage";
-import { MdBadge, MdLogout } from "react-icons/md";
-import { FaShoppingBag } from "react-icons/fa";
+import { MdLogout } from "react-icons/md";
 import { IProduct, ICartItem } from "../types/product.types";
 import { IContextData } from "../types/user.types";
+import Badge from "@mui/material/Badge";
+// import { red } from '@mui/material/colors';
+
+// const primary = red[50];
+
 
 export const Navbar = () => {
   const context: IContextData = useDataContext();
-  const { user, setUser, products} = useDataContext();
+  const { user, setUser, products } = useDataContext();
 
-//!
-const numberOfItems = context.items.reduce((previousValue, currentValue)=>{
-  return previousValue + currentValue.amount
-}, 0)
+  //!
+  const numberOfItems = context.items.reduce((previousValue, currentValue) => {
+    return previousValue + currentValue.amount;
+  }, 0);
 
   const navigate = useNavigate();
 
@@ -23,10 +27,6 @@ const numberOfItems = context.items.reduce((previousValue, currentValue)=>{
     setUser(undefined);
     navigate("/login");
   };
-
-  //! const numberOfItems = context.items.reduce((previousValue, currentValue: number) =>{
-  //   return previousValue + currentValue.amount;
-  // }, 0);
 
   return (
     <div className="Navbar">
@@ -47,13 +47,12 @@ const numberOfItems = context.items.reduce((previousValue, currentValue)=>{
           </NavLink>
         )}
       </div>
+
       <div className="images">
-        <NavLink to="/cart">
-          {/* <MdBadge badgeContent={numberOfItems}>
-            <FaShoppingBag /> */}
-          {/* <img badgeContent={numberOfItems} className="bag" src="/images/bag12.png" alt="bag" /> */}
-          <img className="bag" src="/images/bag12.png" alt="bag" />
-          {/* </MdBadge> */}
+        <NavLink to="/cart" className='ml-1'>
+          <Badge badgeContent={numberOfItems} color='secondary' >
+            <img className="bag" src="/images/bag12.png" alt="bag" />
+          </Badge>
         </NavLink>
         {user && (
           <NavLink to="/">

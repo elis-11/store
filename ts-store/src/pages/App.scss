@@ -128,13 +128,14 @@ code {
     width: 20%;
     .bag {
       width: 2.5rem;
-      margin-right: .5em;
+      margin-right: -.5em;
+      margin-bottom: 1.2em;
     }
     .avatar {
       width: 2.5rem;
       border-radius: 50%;
       border: 1px solid #ccc;
-      padding-left: 0;
+      margin-left: 2em;
     }
   }
 }
