@@ -62,9 +62,14 @@ export const Cart = () => {
                   </div>
 
                   <div className="price">
+                    {`${(cartItem.price).toFixed(2)}`}
+                    <BiEuro style={{ fontSize: "1.5em" }} />
+                  </div>
+                  <div className="price">
                     {`${(cartItem.price * cartItem.amount).toFixed(2)}`}
                     <BiEuro style={{ fontSize: "1.5em" }} />
                   </div>
+
                 </div>
               );
             })}
@@ -78,7 +83,7 @@ export const Cart = () => {
                 <span>
                   {/* {context.items.length}{' '} */}
                   {numberOfItems} {''}
-                  {context.items.length === 1 ? "cake" : "cakes"}
+                  {numberOfItems === 1 ? "cake" : "cakes"}
                 </span>
               </div>
 
