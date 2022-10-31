@@ -62,14 +62,13 @@ export const Cart = () => {
                   </div>
 
                   <div className="price">
-                    {`${(cartItem.price).toFixed(2)}`}
+                    {`${cartItem.price.toFixed(2)}`}
                     <BiEuro style={{ fontSize: "1.5em" }} />
                   </div>
                   <div className="price">
                     {`${(cartItem.price * cartItem.amount).toFixed(2)}`}
                     <BiEuro style={{ fontSize: "1.5em" }} />
                   </div>
-
                 </div>
               );
             })}
@@ -81,15 +80,13 @@ export const Cart = () => {
               <div className="order">
                 <span>Amount</span>
                 <span>
-                  {/* {context.items.length}{' '} */}
-                  {numberOfItems} {''}
+                  {numberOfItems} {""}
                   {numberOfItems === 1 ? "cake" : "cakes"}
                 </span>
               </div>
 
               <div className="order">
                 <span>Order</span>
-
                 <span className="icon">
                   {`${context.totalPrice.toFixed(2)}`}
                   <BiEuro />
