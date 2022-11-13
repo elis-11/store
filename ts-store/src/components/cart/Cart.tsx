@@ -88,7 +88,7 @@ export const Cart = () => {
               <div className="order">
                 <span>Order</span>
                 <span className="icon">
-                  {`${context.totalPrice.toFixed(2)}`}
+                  {`${orderTotal}`}
                   <BiEuro />
                 </span>
               </div>
