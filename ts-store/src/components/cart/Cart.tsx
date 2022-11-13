@@ -26,7 +26,7 @@ export const Cart = () => {
       {context.items.length === 0 && (
         <div className="empty" style={{ marginTop: "5rem" }}>
           <img src="/images/bag12.png" alt="empty" />
-          <h3>Whoops... Your bag is empty</h3>
+          <h3 style={{color:'red', marginBottom:'1rem'}}>Whoops... Your bag is empty!</h3>
           <h4>Looks like you haven't added anything to your bag yet.</h4>
         </div>
       )}
