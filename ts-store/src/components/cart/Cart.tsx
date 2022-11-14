@@ -104,10 +104,9 @@ export const Cart = () => {
               <div className="order total">
                 <span>Total</span>
                 <span className="icon">
-                  {`${10 + parseFloat(orderTotal)}`}
+                  {`${(10 + parseFloat(orderTotal)).toFixed(2)}`}
                   <BiEuro />
                 </span>
-                {/* <span>{`$${context.totalPrice.toFixed(2)}`}</span> */}
               </div>
             </div>
 

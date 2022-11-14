@@ -50,7 +50,7 @@ export const Navbar = () => {
 
       <div className="images">
         <NavLink to="/cart" className='ml-1'>
-          <Badge badgeContent={numberOfItems} color='secondary' >
+          <Badge badgeContent={numberOfItems} color='success'>
             <img className="bag" src="/images/bag12.png" alt="bag" />
           </Badge>
         </NavLink>
