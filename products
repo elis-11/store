@@ -6,7 +6,7 @@
   "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, molestias!",
   "group": "flourless",
   "price": 39.99,
-  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663521735/aonwzwpamdmdhymh7t2q.png",
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1690295228/b0u3y0f0bbdgvztiybsw.png",
   "createdAt": {
     "$date": {
       "$numberLong": "1663521733950"
@@ -14,11 +14,14 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1663521735657"
+      "$numberLong": "1690295229037"
     }
   },
   "author": {
     "$oid": "632388bcaa2249531d885099"
+  },
+  "updater": {
+    "$oid": "64bfd400ad165c8e5a6f5b1b"
   }
 },{
   "_id": {
@@ -50,7 +53,7 @@
   "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, molestias!",
   "group": "flourless",
   "price": 29.99,
-  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663522232/idx25ef2qv2ztacmzhnq.png",
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1690295196/rozrd3wx0mrj1t1rhlqy.png",
   "createdAt": {
     "$date": {
       "$numberLong": "1663522231500"
@@ -58,21 +61,24 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1663522233016"
+      "$numberLong": "1690295196535"
     }
   },
   "author": {
     "$oid": "632388bcaa2249531d885099"
+  },
+  "updater": {
+    "$oid": "64bfd400ad165c8e5a6f5b1b"
   }
 },{
   "_id": {
     "$oid": "6328bd7b36d7e29ba5ace752"
   },
-  "name": "jkhjkh",
-  "description": "khkh",
+  "name": "Cake",
+  "description": "Biskuit",
   "group": "trend",
   "price": 66,
-  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663614332/gz1rtroiaaucnz2qmabv.png",
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1690295130/kkle3ocvtgcutnsjgcwi.png",
   "createdAt": {
     "$date": {
       "$numberLong": "1663614331801"
@@ -80,11 +86,14 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1663614333646"
+      "$numberLong": "1690295130946"
     }
   },
   "author": {
     "$oid": "632388bcaa2249531d885099"
+  },
+  "updater": {
+    "$oid": "64bfd400ad165c8e5a6f5b1b"
   }
 },{
   "_id": {
@@ -94,7 +103,7 @@
   "description": "Biscuit...",
   "group": "trend",
   "price": 64.95,
-  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663693369/jndpu4lykqpgctdzyqaf.png",
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1690295020/lovvfnnxyksmp5yqj764.png",
   "createdAt": {
     "$date": {
       "$numberLong": "1663693368586"
@@ -102,11 +111,14 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1663693370341"
+      "$numberLong": "1690295021648"
     }
   },
   "author": {
     "$oid": "632388bcaa2249531d885099"
+  },
+  "updater": {
+    "$oid": "64bfd400ad165c8e5a6f5b1b"
   }
 },{
   "_id": {
@@ -116,7 +128,7 @@
   "description": "Biscuit...",
   "group": "trend",
   "price": 34.95,
-  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663693573/njutrfha5upxbmfub8tc.png",
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1690294994/hxvgnj02dmh0ern4zkke.png",
   "createdAt": {
     "$date": {
       "$numberLong": "1663693572660"
@@ -124,11 +136,14 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1663693573853"
+      "$numberLong": "1690294995068"
     }
   },
   "author": {
     "$oid": "632388bcaa2249531d885099"
+  },
+  "updater": {
+    "$oid": "64bfd400ad165c8e5a6f5b1b"
   }
 },{
   "_id": {
@@ -160,7 +175,7 @@
   "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, molestias!",
   "group": "flourless",
   "price": 29.99,
-  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663707106/sqo2nncqxhn0bqzhiajk.png",
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1690294967/frt2lwy0carlgsowzba6.png",
   "createdAt": {
     "$date": {
       "$numberLong": "1663707105272"
@@ -168,11 +183,14 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1663707107301"
+      "$numberLong": "1690294968359"
     }
   },
   "author": {
     "$oid": "632388bcaa2249531d885099"
+  },
+  "updater": {
+    "$oid": "64bfd400ad165c8e5a6f5b1b"
   }
 },{
   "_id": {
@@ -182,7 +200,7 @@
   "description": "Biscuit...",
   "group": "trend",
   "price": 63.95,
-  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663707863/intnpdj8ruswk2tbobpx.png",
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1690294943/li7od4lfc2ujids5pdq4.png",
   "createdAt": {
     "$date": {
       "$numberLong": "1663707862667"
@@ -190,11 +208,14 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1663707864984"
+      "$numberLong": "1690294943838"
     }
   },
   "author": {
     "$oid": "632388bcaa2249531d885099"
+  },
+  "updater": {
+    "$oid": "64bfd400ad165c8e5a6f5b1b"
   }
 },{
   "_id": {
@@ -204,7 +225,7 @@
   "description": "Biscuit...",
   "group": "trend",
   "price": 38.95,
-  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663780510/u4vdsohvrxdvaba7icul.png",
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1690294723/asghsobbwspdp77nuf15.png",
   "createdAt": {
     "$date": {
       "$numberLong": "1663780509720"
@@ -212,11 +233,14 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1663780511205"
+      "$numberLong": "1690294723756"
     }
   },
   "author": {
     "$oid": "632388bcaa2249531d885099"
+  },
+  "updater": {
+    "$oid": "64bfd400ad165c8e5a6f5b1b"
   }
 },{
   "_id": {
@@ -226,7 +250,7 @@
   "description": "Biscuit...",
   "group": "trend",
   "price": 43.95,
-  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663780562/mb4arwryc6sudo38n1iw.png",
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1690294660/zvh6zobtdtcgaazndn6j.png",
   "createdAt": {
     "$date": {
       "$numberLong": "1663780561557"
@@ -234,11 +258,14 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1663780563298"
+      "$numberLong": "1690294661045"
     }
   },
   "author": {
     "$oid": "632388bcaa2249531d885099"
+  },
+  "updater": {
+    "$oid": "64bfd400ad165c8e5a6f5b1b"
   }
 },{
   "_id": {
@@ -248,7 +275,7 @@
   "description": "Biscuit...",
   "group": "trend",
   "price": 38.95,
-  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1663780672/mgqauaowqkbffvtkvbgm.png",
+  "image": "https://res.cloudinary.com/dngl4djva/image/upload/v1690294623/smbishsfn1d4tuavvmz1.png",
   "createdAt": {
     "$date": {
       "$numberLong": "1663780670749"
@@ -256,10 +283,13 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1663780672599"
+      "$numberLong": "1690294624233"
     }
   },
   "author": {
     "$oid": "632388bcaa2249531d885099"
+  },
+  "updater": {
+    "$oid": "64bfd400ad165c8e5a6f5b1b"
   }
 }]
